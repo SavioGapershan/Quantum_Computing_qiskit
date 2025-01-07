@@ -87,6 +87,18 @@ plt.legend()
 plt.title("Divided Graph: Two Groups (Partitioned)")
 plt.show()
 
+# Step 10: Display the QAOA quantum circuit with improved label alignment
+qaoa_circuit = vqe.ansatz  # Access the QAOAAnsatz directly
+
+# Draw the quantum circuit with improved label alignment
+fig = plt.figure(figsize=(10, 6))
+ax = fig.add_subplot(111)
+qaoa_circuit.draw(output='mpl', ax=ax, style={'gate_color': '#ffcc00', 'label_color': '#0000ff'})  # Customize colors for better visibility
+
+# Set a title for the quantum circuit plot
+ax.set_title("QAOA Quantum Circuit")
+plt.show()
+
 # Step 9: Output the solution and cost
 print("Optimal Cut:", solution)
 print("Maximized Cut Value (Cost):", cut_value)
